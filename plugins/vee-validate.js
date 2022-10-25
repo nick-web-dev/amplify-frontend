@@ -20,10 +20,11 @@ export default ({ store, app, $vuetify }) => {
   //   store.dispatch('ui/rtlLayout')
   // }
 
-  localize(newLocale, {
-    code: newLocale,
-    messages: store.getters["ui/validation_messages"].messages,
-  });
+  // localize(newLocale, {
+  //   code: newLocale,
+  //   messages: store.getters["ui/validation_messages"].messages,
+  // });
+  
   extend("zip", {
     validate(value) {
       return /^\d{5}(?:[-\s]\d{4})?$/.test(value);
