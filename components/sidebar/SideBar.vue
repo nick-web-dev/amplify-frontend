@@ -5,6 +5,7 @@
       :mini-variant.sync="mini"
       permanent
       class="side-bar__drawer"
+      :style="{ background: getBackgroundColor }"
     >
       <v-list-item
         :class="{
@@ -94,6 +95,12 @@ export default {
       selectedTitle: "Dashboard",
     };
   },
+
+  computed: {
+    getBackgroundColor() {
+      return this.$store.getters["ui/sidebar/getMenus"].color;
+    },
+  },
 };
 </script>
 
@@ -111,7 +118,6 @@ export default {
   &__drawer {
     max-width: 240px !important;
     min-width: 70px !important;
-    background: #e8e8e8;
 
     &-logo-image {
       margin: 35px 22px 0 22px;
