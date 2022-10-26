@@ -88,6 +88,12 @@ export default {
     };
   },
 
+  watch: {
+    mini() {
+      this.$emit("isCollapse", this.mini);
+    },
+  },
+
   computed: {
     getBackgroundColor() {
       return this.$store.getters["ui/sidebar/configuration"].color;
