@@ -1,7 +1,7 @@
 const state = () => ({});
 const getters = {
   validation_messages: (state, getters, rootState) => {
-    return rootState.i18n.messages.front_validation;
+    return rootState.i18n.messages;
   },
 };
 
