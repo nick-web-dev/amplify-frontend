@@ -36,7 +36,7 @@
             'side-bar__drawer-list-item-active':
               selectedTitle === item.title && !mini,
           }"
-          v-for="item in items"
+          v-for="item in getMenuItems"
           :key="item.title"
           link
           @click="selectedTitle = item.title"
@@ -83,14 +83,6 @@ export default {
   data() {
     return {
       drawer: true,
-      items: [
-        { title: "Dashboard", link: "" },
-        { title: "Products", link: "" },
-        { title: "Users", link: "" },
-        { title: "Reports", link: "" },
-        { title: "Orders", link: "" },
-        { title: "Billing", link: "" },
-      ],
       mini: false,
       selectedTitle: "Dashboard",
     };
@@ -98,7 +90,11 @@ export default {
 
   computed: {
     getBackgroundColor() {
-      return this.$store.getters["ui/sidebar/getMenus"].color;
+      return this.$store.getters["ui/sidebar/configuration"].color;
+    },
+
+    getMenuItems() {
+      return this.$store.getters["ui/sidebar/configuration"].items;
     },
   },
 };
