@@ -1,7 +1,7 @@
 const state = () => ({
   appBar: {
-    color: '#ffff'
-  }
+    color: "#ffff",
+  },
 });
 const getters = {
   validation_messages: (state, getters, rootState) => {
@@ -9,7 +9,7 @@ const getters = {
   },
 
   appBarConfiguration: (state) => {
-    return state.appBar
+    return state.appBar;
   },
 };
 
