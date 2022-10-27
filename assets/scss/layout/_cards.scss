@@ -1,0 +1,69 @@
+.card-sidebar {
+  background: transparent !important;
+  &__wrapper {
+    &.sidebar-overlay-dark {
+      > .v-card,
+      .v-toolbar__title,
+      .v-card-title {
+        color: white;
+      }
+    }
+    &.sidebar-overlay-light {
+    }
+    &.sidebar-overlay-primary {
+      > .v-card,
+      .v-toolbar__title,
+      .v-card-title {
+        color: white;
+      }
+    }
+    &.sidebar-overlay-success {
+      > .v-card,
+      .v-toolbar__title,
+      .v-card-title {
+        color: white;
+      }
+    }
+    &.sidebar-overlay-pink {
+      > .v-card,
+      .v-toolbar__title,
+      .v-card-title {
+        color: white;
+      }
+    }
+    &.sidebar-overlay-warning {
+      > .v-card,
+      .v-toolbar__title,
+      .v-card-title {
+        color: white;
+      }
+    }
+    &.sidebar-overlay-purple {
+      > .v-card,
+      .v-toolbar__title,
+      .v-card-title {
+        color: white;
+      }
+    }
+    &.sidebar-overlay-light {
+      > .v-card,
+      .v-toolbar__title,
+      .v-card-title {
+        color: white;
+      }
+    }
+    position: relative;
+    overflow: hidden;
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 0;
+      opacity: 0.9;
+    }
+  }
+}

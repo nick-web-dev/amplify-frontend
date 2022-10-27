@@ -22,6 +22,7 @@
 
       <v-list dense>
         <v-list-item
+          v-if="!item.permissions||$can(item.permissions)"
           class="side-bar__drawer-list-item"
           :class="{
             'side-bar__drawer-list-item-active':
@@ -31,6 +32,7 @@
           :key="item.title"
           link
           @click="selectedTitle = item.title"
+          :to="item.link"
         >
           <v-list-item-icon class="side-bar__drawer-list-item-icon">
             <img

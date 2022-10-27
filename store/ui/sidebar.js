@@ -1,19 +1,26 @@
 const state = () => ({
   menus: {
-    color: '#e8e8e8',
+    color: "#e8e8e8",
     items: [
-      { title: "Dashboard", link: "" },
+      {
+        title: "Roles",
+        link: "/roles",
+      },
+      {
+        title: "Dashboard",
+        link: "",
+      },
       { title: "Products", link: "" },
       { title: "Users", link: "" },
       { title: "Reports", link: "" },
       { title: "Orders", link: "" },
       { title: "Billing", link: "" },
     ],
-  }
+  },
 });
 const getters = {
   configuration: (state) => {
-    return state.menus
+    return state.menus;
   },
 };
 

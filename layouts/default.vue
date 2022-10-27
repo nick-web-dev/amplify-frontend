@@ -5,7 +5,7 @@
       <side-bar @isCollapse="isCollapse" />
     </div>
     <v-main>
-      <v-container>
+      <v-container fluid>
         <Nuxt />
       </v-container>
     </v-main>
