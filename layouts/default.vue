@@ -1,10 +1,10 @@
 <template>
   <v-app dark>
+    <div>
+      <app-bar :is-collapsed="isCollapsed" />
+      <side-bar @isCollapse="isCollapse" />
+    </div>
     <v-main>
-      <div>
-        <side-bar @isCollapse="isCollapse" />
-        <app-bar :is-collapsed="isCollapsed" />
-      </div>
       <v-container>
         <Nuxt />
       </v-container>
