@@ -3,3 +3,12 @@
 @import "../variables.scss";
 
 @import "./layout";
+
+/*=============================================
+=            snotify            =
+=============================================*/
+
+@import "~vue-snotify/styles/material";
+@import "plugins/snotify";
+
+/*=====  End of snotify  ======*/

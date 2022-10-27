@@ -18,6 +18,7 @@ import AppBar from "~/components/layout/AppBar.vue";
 
 export default {
   name: "DefaultLayout",
+  middleware: ["authenticated"],
 
   components: {
     SideBar,
