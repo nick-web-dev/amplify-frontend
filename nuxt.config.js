@@ -14,6 +14,10 @@ export default {
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   },
 
+  router: {
+    middleware: ["check-auth"],
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ["~/assets/scss/index.scss"],
 
@@ -27,12 +31,21 @@ export default {
       src: "~plugins/Snotify",
       ssr: false,
     },
+    {
+      src: "~plugins/vss",
+      ssr: false,
+    },
 
     { src: "~/plugins/i18n.js" },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: [
+    {
+      path: "~/components/base/",
+      prefix: "v-base-",
+    },
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
