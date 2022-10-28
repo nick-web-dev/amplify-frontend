@@ -8,7 +8,7 @@ const state = () => ({
       },
       {
         title: "Dashboard",
-        link: "",
+        link: "/",
       },
       { title: "Products", link: "" },
       { title: "Users", link: "" },
