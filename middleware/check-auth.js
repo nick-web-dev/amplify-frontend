@@ -4,6 +4,10 @@ export default function ({ store, req, route, app }) {
     type: app.$Cookie.get("type"),
   });
 
+  store.commit("auth/setUser", {
+    user: app.$Cookie.get("user") ?? null,
+  });
+
   return store
     .dispatch("auth/getUserInformation")
     .then((response) => {
@@ -12,5 +16,6 @@ export default function ({ store, req, route, app }) {
     .catch((error) => {
       app.$Cookie.remove("token");
       app.$Cookie.remove("type");
+      app.$Cookie.remove("user");
     });
 }

@@ -29,7 +29,7 @@
               </v-col>
             </v-row>
           </template>
-          <roles-table></roles-table>
+          <roles-table :refetch="refetch"></roles-table>
         </v-card-datacard>
       </v-col>
     </v-row>
@@ -40,7 +40,7 @@
       transition="dialog-bottom-transition"
       style="z-index: 99999"
     >
-      <roles-role-dialog @close="add_new_role_dialog = false" />
+      <roles-role-dialog @refetch="refetch = !refetch" @close="add_new_role_dialog = false" />
     </v-dialog>
   </v-container>
 </template>
@@ -53,6 +53,7 @@ export default {
   data() {
     return {
       add_new_role_dialog: false,
+      refetch: true,
     };
   },
   computed: {},
