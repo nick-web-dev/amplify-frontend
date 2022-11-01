@@ -35,9 +35,30 @@
           class="app-header__avatars-avatar-setting"
         />
       </v-avatar>
-      <v-avatar size="36" class="app-header__avatars-avatar">
+      <v-menu
+            bottom
+            left
+          >
+            <template v-slot:activator="{ on, attrs }">
+
+              <v-avatar size="36" class="app-header__avatars-avatar"
+                v-bind="attrs"
+                v-on="on"
+              >
+                <v-icon>mdi-account-circle</v-icon>
+              </v-avatar>
+            </template>
+
+            <v-list>
+              <v-list-item>
+                <v-list-item-title @click="logout">Logout</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-menu>
+
+      <!-- <v-avatar size="36" class="app-header__avatars-avatar">
         <v-icon>mdi-account-circle</v-icon>
-      </v-avatar>
+      </v-avatar> -->
     </div>
   </div>
 </template>
@@ -52,6 +73,11 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch("auth/logout")
+    }
   },
 
   computed: {

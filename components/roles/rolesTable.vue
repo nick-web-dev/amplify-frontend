@@ -81,8 +81,16 @@ export default {
     };
   },
   computed: {},
-  props: {},
-  watch: {},
+  props: {
+    refetch: {
+      default: true
+    }
+  },
+  watch: {
+    refetch(){
+      this.getDataFromApi();
+    }
+  },
   methods: {
     deleteRole(role) {
       // todo

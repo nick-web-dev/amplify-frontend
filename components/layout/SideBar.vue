@@ -32,7 +32,7 @@
           :key="item.title"
           link
           @click="selectedTitle = item.title"
-          :to="item.link"
+          :to="localePath(item.link)"
         >
           <v-list-item-icon class="side-bar__drawer-list-item-icon">
             <img

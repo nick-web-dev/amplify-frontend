@@ -28,6 +28,9 @@ const actions = {
       this.$Cookie.set("type", response.data.user.type, {
         expires: new Date(response.data.token.expires_at),
       });
+      this.$Cookie.set("user", response.data.user, {
+        expires: new Date(response.data.token.expires_at),
+      });
       context.commit("setToken", {
         token: response.data.token.accessToken,
         type: response.data.user.type,
@@ -40,13 +43,16 @@ const actions = {
     return this.$axios
       .delete("/auth/logout")
       .then((response) => {
-        this.$Cookie.remove("token");
-        this.$Cookie.remove("type");
+        this.$Cookie.remove("token", {path: '/en'});
+        this.$Cookie.remove("type", {path: '/en'});
+        this.$Cookie.remove("user", {path: '/en'});
         window.location.reload();
       })
       .catch((error) => {
-        this.$Cookie.remove("token");
-        this.$Cookie.remove("type");
+        this.$Cookie.remove("token", {path: '/en'});
+        this.$Cookie.remove("type", {path: '/en'});
+        this.$Cookie.remove("user", {path: '/en'});
+        window.location.reload();
       });
   },
   getUserInformation(context, { force = false } = { force: false }) {
@@ -80,7 +86,7 @@ const mutations = {
   },
   setUser(state, data) {
     state.user = data.user;
-    state.type = data.user.type;
+    state.type = data.user?.type;
 
     this.$setUser(data.user);
   },
