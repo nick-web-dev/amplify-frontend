@@ -37,6 +37,7 @@ export default {
     },
 
     { src: "~/plugins/i18n.js" },
+    { src: '~plugins/vue-carousel-3d', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

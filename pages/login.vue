@@ -1,10 +1,10 @@
 <template>
   <v-layout align-center justify-center>
     <v-flex xs12 sm8 md4>
-      <ValidationObserver ref="loginForm" slim v-slot="{handleSubmit}">
+      <ValidationObserver ref="loginForm" slim v-slot="{ handleSubmit }">
         <v-card class="elevation-12">
           <v-toolbar dark flat>
-            <v-toolbar-title>{{$t('login.Login form')}}</v-toolbar-title>
+            <v-toolbar-title>{{ $t("login.Login form") }}</v-toolbar-title>
             <v-spacer></v-spacer>
           </v-toolbar>
           <v-card-text>
@@ -39,7 +39,6 @@
   </v-layout>
 </template>
 
-
 <script>
 export default {
   layout: "guest",
@@ -71,7 +70,7 @@ export default {
           this.$nextTick(() => {
             this.loading = false;
             setTimeout(() => {
-              this.$router.push(this.localePath("/"));
+              this.$router.push(this.localePath("/liqueur-dashboard"));
             }, 500);
           });
         },
