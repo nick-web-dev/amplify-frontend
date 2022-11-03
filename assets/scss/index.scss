@@ -4,11 +4,19 @@
 
 @import "./layout";
 
+@import "./dashboard";
+
 /*=============================================
 =            snotify            =
 =============================================*/
 
 @import "~vue-snotify/styles/material";
 @import "plugins/snotify";
+
+.my-carousel {
+  a[class^="prev"], a[class^="next"] {
+    display: none;
+  }
+}
 
 /*=====  End of snotify  ======*/

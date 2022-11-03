@@ -13,25 +13,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.table-row {
-  border: 1px solid #e8e8e8;
-  padding: 28px 33px;
-  border-radius: 16px;
-  display: flex;
-  justify-content: space-between;
-
-  &__text {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 16px;
-  }
-
-  &__buffer {
-    width: 160px;
-    height: 19px;
-    background: #e8e8e8;
-    border-radius: 5px;
-  }
-}
-</style>
+<style scoped lang="scss"></style>

@@ -14,20 +14,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.grettings {
-  &__subtitle {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 28px;
-    color: #767676;
-    margin-bottom: 18px !important;
-  }
-  &__title {
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 53px;
-    color: #1d1d1d;
-  }
-}
-</style>
+<style scoped lang="scss"></style>

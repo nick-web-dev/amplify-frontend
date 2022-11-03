@@ -11,8 +11,9 @@
       <v-base-select
         :rules="'required'"
         type="text"
-        :items="['All clients']"
+        :items="['All clients', 'New clients']"
         v-model="clients"
+        style="padding-top: 0px"
         :style="showClients ? 'display: block' : 'display: none'"
       ></v-base-select>
     </div>
@@ -27,8 +28,9 @@
       <v-base-select
         :rules="'required'"
         type="text"
-        :items="['Sort: A-Z']"
+        :items="['Sort: A-Z', 'A', 'B']"
         v-model="sorts"
+        style="padding-top: 0px"
         :style="showSorts ? 'display: block' : 'display: none'"
       ></v-base-select>
     </div>
@@ -44,55 +46,11 @@ export default {
       clients: "All clients",
       sorts: "Sort: A-Z",
 
-      showSorts: false,
-      showClients: false,
+      showSorts: true,
+      showClients: true,
     };
   },
 };
 </script>
 
-<style scoped lang="scss">
-::v-deep .v-text-field {
-  padding-top: 0px !important;
-}
-
-.filter {
-  border-top: 1px solid #e8e8e8;
-  padding-top: 30px;
-  margin-top: 50px;
-  display: flex;
-  gap: 10px;
-
-  &__select-clients {
-    width: 190px !important;
-    height: 50px;
-    border-radius: 100px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
-    padding: 4px 24px 4px 24px;
-
-    &-text {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 15px;
-      padding-top: 13px;
-    }
-  }
-
-  &__select-sorts {
-    width: 150px !important;
-    height: 50px;
-    border-radius: 100px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
-    padding: 4px 24px 4px 24px;
-
-    &-text {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 15px;
-      padding-top: 13px;
-    }
-  }
-}
-</style>
+<style scoped lang="scss"></style>

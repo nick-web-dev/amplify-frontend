@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="px-16">
     <v-row>
       <v-col cols="12" md="6" class="pt-13">
         <greatings />
