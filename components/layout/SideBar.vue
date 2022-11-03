@@ -16,13 +16,25 @@
           'side-bar__drawer-logo-image-small': mini,
         }"
       >
-        <img v-if="!mini" src="../../assets/logo/logo-long.png" alt width="195" height="45" />
-        <img v-else src="../../assets/logo/logo-short.png" alt width="48" height="29" />
+        <img
+          v-if="!mini"
+          src="../../assets/logo/logo-long.png"
+          alt
+          width="195"
+          height="45"
+        />
+        <img
+          v-else
+          src="../../assets/logo/logo-short.png"
+          alt
+          width="48"
+          height="29"
+        />
       </v-list-item>
 
       <v-list dense>
         <v-list-item
-          v-if="!item.permissions||$can(item.permissions)"
+          v-if="!item.permissions || $can(item.permissions)"
           class="side-bar__drawer-list-item"
           :class="{
             'side-bar__drawer-list-item-active':
@@ -42,7 +54,13 @@
               alt
               v-if="selectedTitle === item.title && mini"
             />
-            <img src="../../assets/icon/sidebar.png" width="30" height="30" alt v-else />
+            <img
+              src="../../assets/icon/sidebar.png"
+              width="30"
+              height="30"
+              alt
+              v-else
+            />
           </v-list-item-icon>
 
           <v-list-item-content
@@ -98,5 +116,4 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
