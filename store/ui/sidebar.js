@@ -10,7 +10,7 @@ const state = () => ({
         title: "Dashboard",
         link: "/liqueur-dashboard",
       },
-      { title: "Products", link: "" },
+      { title: "Products", link: "/product" },
       { title: "Users", link: "" },
       { title: "Reports", link: "" },
       { title: "Orders", link: "" },
