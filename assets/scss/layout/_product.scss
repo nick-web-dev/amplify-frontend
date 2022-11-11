@@ -1,24 +1,24 @@
 .product-section {
-  border: 1px solid #e8e8e8;
+  border: 1px solid var(--v-unicornSilver);
   .product_wrapper {
     h2 {
       font-weight: 400;
       font-size: 22px;
       line-height: 21px;
-      color: #767676;
+      color: var(--v-luckyGray);
       margin-bottom: 11px;
     }
     h1 {
       font-weight: 400;
       font-size: 30px;
       line-height: 29px;
-      color: #1d1d1d;
+      color: var(--v-dynamicBlack);
     }
     h6 {
       font-weight: 700;
       font-size: 12px;
       line-height: 11px;
-      color: #1d1d1c;
+      color: var(--v-dynamicBlack2);
       margin-bottom: 10px;
     }
     .product-progress {
@@ -27,13 +27,13 @@
         font-weight: 400;
         font-size: 12px;
         line-height: 11px;
-        color: #929292;
+        color: var(--v-nickel);
       }
       h6 {
         font-weight: 700;
         font-size: 16px;
         line-height: 15px;
-        color: #1d1d1d;
+        color: var(--v-dynamicBlack);
       }
     }
     .v-stepper {
@@ -52,30 +52,28 @@
     display: flex;
     flex-flow: wrap;
     .review {
-      background-color: rgba(232, 232, 232, 0.5);
+      background-color: var(--v-unicornSilverLight);
       border-radius: 16px;
-      flex: 0 0 42% !important;
-      max-width: 42% !important;
       margin: 15px;
       display: flex;
       align-items: center;
-      .title {
+      .title-review {
         font-weight: 700;
         font-size: 12px;
         line-height: 11px;
-        color: #1d1d1d;
+        color: var(--v-dynamicBlack);
         margin-bottom: 0;
       }
       span {
         font-weight: 400;
         font-size: 12px;
         line-height: 11px;
-        color: #929292;
+        color: var(--v-nickel);
       }
     }
   }
   .user-right {
-    border-left: 1px solid #e8e8e8;
+    border-left: 1px solid var(--v-unicornSilver);
     .user-wrap {
       display: flex;
       figure {
@@ -95,14 +93,14 @@
           font-weight: 700;
           font-size: 12px;
           line-height: 11px;
-          color: #1d1d1c;
+          color: var(--v-dynamicBlack2);
           margin-bottom: 5px;
         }
         p {
           font-weight: 400;
           font-size: 12px;
           line-height: 11px;
-          color: #929292;
+          color: var(--v-nickel);
         }
       }
     }
@@ -111,13 +109,13 @@
 .tab-section {
   margin-top: 20px;
   .v-tabs {
-    border-bottom: 1px solid #e8e8e8;
+    border-bottom: 1px solid var(--v-unicornSilver);
     .v-tabs-slider-wrapper {
-      color: #1d1d1c !important;
+      color: var(--v-dynamicBlack2) !important;
       height: 4px !important;
     }
     .v-tab {
-      color: #1d1d1c !important;
+      color: var(--v-dynamicBlack2) !important;
       font-weight: 700;
       font-size: 16px;
       line-height: 15px;
@@ -126,7 +124,7 @@
         font-weight: 400;
         font-size: 12px;
         line-height: 11px;
-        color: #929292;
+        color: var(--v-nickel);
         margin-top: 10px;
       }
     }
@@ -138,11 +136,13 @@
       .v-card {
         .v-card__title {
           justify-content: space-between;
-          .title {
+          overflow: auto;
+          .title-card {
+            margin-bottom: 10px;
             font-weight: 400;
-            font-size: 12px;
+            font-size: 12px !important;
             line-height: 11px;
-            color: #929292;
+            color: var(--v-nickel);
           }
           .header-action {
             .v-tabs {
@@ -151,9 +151,9 @@
                 display: none;
               }
               .v-tab--active {
-                background: #1D1D1C;
+                background: var(--v-dynamicBlack2);
                 border-radius: 100px;
-                color: #FFFFFF !important;
+                color: var(--v-white) !important;
               }
             }
             .v-tab {
@@ -161,7 +161,7 @@
               font-size: 12px;
               line-height: 11px;
               text-align: right;
-              color: #1D1D1D;
+              color: var(--v-dynamicBlack);
               padding: 5px 10px;
               text-transform: unset;
               &:hover {
@@ -181,14 +181,14 @@
                   font-weight: 700;
                   font-size: 12px;
                   line-height: 11px;
-                  color: #1D1D1D;
+                  color: var(--v-dynamicBlack);
                   margin-bottom: 6px;
                 }
                 p {
                   font-weight: 400;
                   font-size: 12px;
                   line-height: 11px;
-                  color: #929292;
+                  color: var(--v-nickel);
                 }
               }
               .progress {
@@ -197,7 +197,7 @@
                 line-height: 53px;
                 text-align: right;
                 span {
-                  color: #1D1D1D;
+                  color: var(--v-dynamicBlack);
                 }
               }
             }
@@ -209,13 +209,13 @@
                 font-size: 28px;
                 line-height: 27px;
                 text-align: right;
-                color: #1D1D1D;
+                color: var(--v-dynamicBlack);
               }
               span {
                 font-weight: 400;
                 font-size: 12px;
                 line-height: 11px;
-                color: #929292;
+                color: var(--v-nickel);
                 float: right;
                 margin-top: 5px;
               }
@@ -229,7 +229,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: rgba(232, 232, 232, 0.5);
+            background: var(--v-unicornSilverLight);
             border-radius: 12px;
             padding: 35px 33px 47px 34px;
             h1 {
@@ -237,14 +237,14 @@
               font-size: 28px;
               line-height: 53px;
               text-align: center;
-              color: #1D1D1D;
+              color: var(--v-dynamicBlack);
             }
             p {
               font-weight: 700;
               font-size: 12px;
               line-height: 15px;
               text-align: center;
-              color: #1D1D1D;
+              color: var(--v-dynamicBlack);
             }
 
           }
@@ -253,25 +253,27 @@
       .url-tabs {
         .title-wrap {
           display: flex;
+          margin-bottom: 10px;
           h1 {
             font-weight: 400;
             font-size: 20px;
             line-height: 53px;
-            color: #1D1D1D;
+            color: var(--v-dynamicBlack);
           }
           .action {
             align-items: center;
             display: flex;
             justify-content: end;
             .v-btn {
-              background: #FFFFFF;
+              background: var(--v-white);
+              // box-shadow: 0px 0px 14px var(--v-lightGray), 0px 7px 14px var(--v-black2);
               box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.05), 0px 7px 14px rgba(0, 0, 0, 0.1);
               border-radius: 100px;
               font-weight: 700;
               font-size: 14px;
               line-height: 13px;
               text-align: center;
-              color: #1D1D1D;
+              color: var(--v-dynamicBlack);
               margin-left: 15px;
               text-transform: unset;
               span {
@@ -286,20 +288,21 @@
             display: none;
           }
           .v-tab--active {
-            background: #1D1D1C;
+            background: var(--v-dynamicBlack2);
             border-radius: 100px;
-            color: #FFFFFF !important;
+            color: var(--v-white) !important;
           }
         }
         .table-row {
-          border: 1px solid #e8e8e8;
+          border: 1px solid var(--v-unicornSilver);
           border-radius: 16px;
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           align-items: center;
           margin-bottom: 10px;
           .right-row {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             align-items: center;
           }
@@ -307,12 +310,13 @@
             font-weight: 700;
             font-size: 16px;
             line-height: 16px;
+            word-break: break-all;
             .v-btn {
               text-transform: none;
             }
             .active {
-              color: #fff;
-              background: #1D1D1C;
+              color: var(--v-white);
+              background: var(--v-dynamicBlack2);
               border-radius: 100px;
               padding: 14px 20px;
             }
@@ -321,8 +325,8 @@
               font-size: 14px;
               line-height: 13px;
               text-align: center;
-              color: #1D1D1C;
-              border: 1px solid #1D1D1C;
+              color: var(--v-dynamicBlack2);
+              border: 1px solid var(--v-dynamicBlack2);
               border-radius: 100px;
               padding: 14px 20px;
               span {
@@ -331,13 +335,13 @@
             }
           }
           &__buffer {
-            background: #e8e8e8;
+            background: var(--v-unicornSilver);
             border-radius: 6px;
             font-weight: 400;
             font-size: 12px;
             line-height: 11px;
             text-align: center;
-            color: #929292;
+            color: var(--v-nickel);
             padding: 9px;
             display: flex;
             flex-direction: column;
@@ -346,7 +350,7 @@
               font-size: 20px;
               line-height: 19px;
               text-align: center;
-              color: #1D1D1D;
+              color: var(--v-dynamicBlack);
               margin-top: 5px;
             }
           }

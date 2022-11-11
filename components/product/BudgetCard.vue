@@ -1,7 +1,7 @@
 <template>
   <v-card class="">
     <v-card-title>
-      <div class="title">Budget</div>
+      <div class="title-card">Budget</div>
       <div class="header-action">
         <v-tabs v-model="tab">
           <v-tab href="#tab-1">Budget vs. spend</v-tab>

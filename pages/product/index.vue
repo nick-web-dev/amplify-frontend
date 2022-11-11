@@ -1,10 +1,10 @@
 <template>
   <div>
     <v-row class="product-section">
-      <v-col cols="10" md="10" class="pt-13 px-10">
+      <v-col cols="12" lg="10" md="12" sm="12" xs="12" class="pt-13 px-10">
         <ProductDetail />
       </v-col>
-      <v-col cols="2" md="2" class="pt-13 user-right">
+      <v-col cols="12" lg="2" md="12" sm="12" xs="12" class="pt-13 user-right">
         <UsersList />
       </v-col>
     </v-row>

@@ -22,15 +22,15 @@
     <v-tabs-items v-model="tab">
       <v-tab-item v-for="i in 4" :key="i" :value="'tab-' + i">
         <v-row>
-          <v-col cols="6" md="6">
+          <v-col cols="12" lg="6" md="12" sm="12" xs="12">
             <LinqCard />
           </v-col>
-          <v-col cols="6" md="6">
+          <v-col cols="12" lg="6" md="12" sm="12" xs="12">
             <BudgetCard />
           </v-col>
         </v-row>
         <v-row>
-          <v-col cols="12" md="12">
+          <v-col cols="12" lg="12" md="12" sm="12" xs="12">
             <UrlTableList />
           </v-col>
         </v-row>
