@@ -113,6 +113,10 @@
     .v-tabs-slider-wrapper {
       color: var(--v-dynamicBlack2) !important;
       height: 4px !important;
+      .v-tabs-slider {
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+      }
     }
     .v-tab {
       color: var(--v-dynamicBlack2) !important;
@@ -126,6 +130,10 @@
         line-height: 11px;
         color: var(--v-nickel);
         margin-top: 10px;
+        &.overdue {
+          color: var(--v-red);
+          font-weight: 700;
+        }
       }
     }
   }

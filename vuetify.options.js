@@ -16,6 +16,7 @@ export default ({ store }) => {
           white: "#ffffff",
           lightGray: "#0000000d",
           black2: "#00000003",
+          red: "#FF0000",
         },
       },
     },

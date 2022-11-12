@@ -15,7 +15,10 @@
         Content Selection
       </v-tab>
       <v-tab href="#tab-4">
-        <p>Overdue</p>
+        <p class="overdue">
+          <span><img src="../../assets/icon/overdue.svg" alt="" /></span>
+          Overdue
+        </p>
         Reconciliation
       </v-tab>
     </v-tabs>
