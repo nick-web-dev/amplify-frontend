@@ -52,6 +52,12 @@ export default {
     };
   },
 
+  mounted() {
+    this.$store.dispatch('tasks/fetchTasks', {
+      perPage: this.slides
+    });
+  },
+
   methods: {
     stepDown() {
       if (this.defaultIndex) {
