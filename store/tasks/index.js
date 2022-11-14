@@ -1,7 +1,8 @@
 import TaskService from "~/services/taskService";
 
 const state = () => ({
-  currentTasks: []
+  currentTasks: [],
+  isFetching: true
 });
 
 const getters = {
@@ -12,7 +13,15 @@ const getters = {
 
 const actions = {
   fetchTasks(context, query) {
-    return new TaskService(this.$axios).fetchPaginated(query);
+    this.$axios.get('linquer/tasks', query).then((resp) => {
+      const tasks = resp.data;
+
+      context.commit('setCurrentTasks', tasks.data);
+      return tasks;
+
+    }, (err) => {
+      console.log(err.toString())
+    });
   }
 };
 

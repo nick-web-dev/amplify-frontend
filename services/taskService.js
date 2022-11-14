@@ -5,11 +5,7 @@ class TaskService {
   }
 
   fetchPaginated(queryParams) {
-    this.client.get('linquer/tasks', queryParams).then((resp) => {
-      return resp.data;
-    }, (err) => {
-      console.log(err.toString())
-    });
+
   }
 }
 
