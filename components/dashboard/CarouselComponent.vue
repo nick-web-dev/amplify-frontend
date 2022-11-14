@@ -52,7 +52,7 @@ export default {
 
   data() {
     return {
-      defaultIndex: 1,
+      defaultIndex: 0,
     };
   },
 
