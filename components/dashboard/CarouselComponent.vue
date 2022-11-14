@@ -5,9 +5,11 @@
         :width="420"
         :height="220"
         :controls-visible="true"
-        :display="1"
         style="z-index: 99"
         v-if="slides"
+        :display="1"
+        :count="slides.length"
+        :startIndex="defaultIndex"
       >
         <slide v-for="slide in slides" :key="slide.id" :index="slide.id - 1"  >
           <v-card class="my-carousel__slide-card" v-if="slide !== undefined">
@@ -50,14 +52,13 @@ export default {
 
   data() {
     return {
-      slidesCount: 3,
       defaultIndex: 1,
     };
   },
 
   created() {
     this.$store.dispatch('tasks/fetchTasks', {
-      perPage: this.slidesCount
+      perPage: 15
     });
   },
 
