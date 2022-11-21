@@ -5,14 +5,15 @@
     padding: 28px 33px;
     border-radius: 16px;
     display: flex;
-    justify-content: space-between;
-  
+    justify-content: flex-start;
+
     &__text {
       font-weight: 700;
       font-size: 16px;
       line-height: 16px;
+      width: 25%;
     }
-  
+
     &__buffer {
       width: 160px;
       height: 19px;
