@@ -12,7 +12,7 @@
       <filter-component />
     </div>
     <div class="mt-7">
-      <table-row v-for="n in 10" :key="n" class="mb-2" />
+      <table-rows />
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@
 import Greatings from "~/components/dashboard/Grettings.vue";
 import CarouselComponent from "~/components/dashboard/CarouselComponent.vue";
 import FilterComponent from "~/components/dashboard/FilterComponent.vue";
-import TableRow from "~/components/dashboard/TableRow.vue";
+import TableRows from "~/components/dashboard/TableRow.vue";
 
 export default {
   name: "Dashboard",
@@ -30,7 +30,7 @@ export default {
     Greatings,
     CarouselComponent,
     FilterComponent,
-    TableRow,
+    TableRows,
   },
 };
 </script>

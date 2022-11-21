@@ -28,7 +28,7 @@
       <v-base-select
         :rules="'required'"
         type="text"
-        :items="['Sort: A-Z', 'A', 'B']"
+        :items="['Sort: A-Z', 'Z-A']"
         v-model="sorts"
         style="padding-top: 0px"
         :style="showSorts ? 'display: block' : 'display: none'"

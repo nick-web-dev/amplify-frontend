@@ -1,4 +1,3 @@
-import TaskService from "~/services/taskService";
 
 const state = () => ({
   currentTasks: [],
