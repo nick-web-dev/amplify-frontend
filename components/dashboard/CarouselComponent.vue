@@ -1,27 +1,30 @@
 <template>
   <div class="my-carousel">
-    <no-ssr placeholder="Loading...">
+    <no-ssr>
       <carousel-3d
         :width="420"
         :height="220"
         :controls-visible="true"
-        :display="1"
         style="z-index: 99"
+        v-if="slides"
+        :display="1"
+        :count="slides.length"
+        :startIndex="defaultIndex"
       >
-        <slide v-for="slide in slides" :key="slide" :index="slide - 1">
-          <v-card class="my-carousel__slide-card">
-            <span>{{ slide }} of {{ slides }}</span>
-            <p class="mb-0">Mine wishlist</p>
+        <slide v-for="slide in slides" :key="slide.id" :index="slide.id - 1"  >
+          <v-card class="my-carousel__slide-card" v-if="slide !== undefined">
+            <span>{{ slide.id }} of {{ slides.length }}</span>
+            <p class="mb-0">{{slide.status}}</p>
             <div
               class="d-flex justify-space-between my-carousel__slide-card-bottom"
             >
               <div>
                 <span>Client</span>
-                <p class="mb-0">Groupon</p>
+                <p class="mb-0">{{ slide.destination_url.campaign.client.name}}</p>
               </div>
               <div>
                 <span>Campaign</span>
-                <p class="mb-0">Campaign name</p>
+                <p class="mb-0">{{slide.destination_url.campaign.name }}</p>
               </div>
             </div>
           </v-card>
@@ -42,37 +45,44 @@
 </template>
 
 <script>
+import {mapState} from "vuex";
+
 export default {
   name: "Carousel",
 
   data() {
     return {
-      slides: 3,
       defaultIndex: 0,
     };
   },
+
+  created() {
+    this.$store.dispatch('tasks/fetchTasks', {
+      perPage: 15
+    });
+  },
+
+  computed: mapState({
+    slides: state => state.tasks.currentTasks
+  }),
 
   methods: {
     stepDown() {
       if (this.defaultIndex) {
         this.defaultIndex--;
       } else {
-        this.defaultIndex = this.slides - 1;
+        this.defaultIndex = this.slides.length - 1;
       }
       document.querySelector("div.carousel-3d-controls > a.prev").click();
     },
     stepUp() {
-      if (this.defaultIndex === this.slides - 1) {
+      if (this.defaultIndex === this.slides.length - 1) {
         this.defaultIndex = 0;
       } else {
         this.defaultIndex++;
       }
       document.querySelector("div.carousel-3d-controls > a.next").click();
-    },
-
-    deIndex(value) {
-      return value;
-    },
+    }
   },
 };
 </script>
