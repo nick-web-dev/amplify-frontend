@@ -3,6 +3,7 @@
 @import "../variables.scss";
 
 @import "./layout";
+@import "./font.scss";
 
 @import "./dashboard";
 
@@ -13,6 +14,12 @@
 @import "~vue-snotify/styles/material";
 @import "plugins/snotify";
 
+html {
+  font-family: "Gotham Pro";
+}
+.v-application .v-application--wrap * {
+  font-family: $body-font-family !important;
+}
 .my-carousel {
   a[class^="prev"], a[class^="next"] {
     display: none;
